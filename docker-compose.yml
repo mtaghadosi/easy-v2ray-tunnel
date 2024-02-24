@@ -17,3 +17,6 @@ services:
       - SSL_ENABLED=TRUE
       - CERT_PATH=$PWD/cloudflare-tls/cert.crt  # Dynamic path using $PWD
       - PRIVATE_PATH=$PWD/cloudflare-tls/private.key  # Dynamic path using $PWD
+    volumes:
+      - ./cert.crt:$PWD/cert.crt  # Mount the cert.crt file from the host
+      - ./private.key:$PWD/private.key  # Mount the private.key file from the host
