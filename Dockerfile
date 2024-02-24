@@ -9,4 +9,5 @@ RUN apt clean autoremove
 WORKDIR /easy-v2ray
 COPY . /easy-v2ray/
 
-CMD ["./install.sh"]
+RUN chmod +x install.sh
+RUN ./install.sh
