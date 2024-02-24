@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  easy-v2ray:
+    build:
+      context: .
+    privileged: true
+    environment:
+      - IP=15.160.207.122 # Change this
+      - PASSWORD=iqclsSQA1@1 # Change this
+      - DOMAIN=homeoffice.beawear.shop # Change this
+      - REMARK=tinta_ # Change this
+      - USER=ubuntu
+      - XPORT=65284
+      - XUSER=ubuntu
+      - XPASSWORD="iqclsSQA1@1"
+      - SSL_ENABLED=TRUE
+      - CERT_PATH=$PWD/cloudflare-tls/cert.crt  # Dynamic path using $PWD
+      - PRIVATE_PATH=$PWD/cloudflare-tls/private.key  # Dynamic path using $PWD
